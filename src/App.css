@@ -32,19 +32,3 @@ h1 {
 	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	outline: thin;
 }
-
-table {
-	height: 100vh;
-}
-
-#exc embed {
-	height: 100vh;
-	width: 100%;
-}
-
-#exc {
-	background-color: rgb(222, 222, 222);
-	height: 100vh;
-	width: 100%;
-	padding: 1.5rem;
-}

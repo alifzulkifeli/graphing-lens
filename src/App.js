@@ -16,9 +16,6 @@ function App() {
 					{" "}
 					<Graphs />
 				</div>
-				<div id="exc">
-					<embed src="https://sheet.new" />
-				</div>
 			</div>
 		</Fragment>
 	);

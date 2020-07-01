@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Line } from "react-chartjs-2";
 
 const Graphs = () => {
 	const [data, setData] = useState({
@@ -26,7 +27,15 @@ const Graphs = () => {
 		v4: Math.round((1 / data.v4 + Number.EPSILON) * 1000) / 1000,
 		v5: Math.round((1 / data.v5 + Number.EPSILON) * 1000) / 1000,
 	};
-
+	const chartData = {
+		labels: [data2.u1, data2.u2, data2.u3, data2.u4, data2.u5],
+		datasets: [
+			{
+				labels: [data2.u1, data2.u2, data2.u3, data2.u4, data2.u5],
+				data: [data2.v1, data2.v2, data2.v3, data2.v4, data2.v5],
+			},
+		],
+	};
 	const handleChange = (input) => (event) => {
 		setData({ ...data, [input]: event.target.value });
 	};
@@ -176,6 +185,15 @@ const Graphs = () => {
 					</tr>
 				</tbody>
 			</table>
+			<Line
+				data={chartData}
+				options={{
+					title: {
+						display: "asdaw",
+						fontSize: 25,
+					},
+				}}
+			/>
 		</div>
 	);
 };
